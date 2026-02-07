@@ -26,12 +26,11 @@ SECRET_KEY = 'django-insecure-@ja71wv^p&bfrg$9g)f8pwbj$d8&i#xr-d&v%m6(mj(!(9y-k6
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-
 # Application definition
 
 INSTALLED_APPS = [
     'fundraisers.apps.FundraisersConfig',
+    'users.apps.UsersConfig',    
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+AUTH_USER_MODEL = 'users.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -123,3 +124,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# ...
+
+ALLOWED_HOSTS = []
+
+# Application definition
+
